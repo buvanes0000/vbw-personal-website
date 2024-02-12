@@ -18,6 +18,8 @@ body {
   font-family: "Josefin Sans", sans-serif;
   background-color: #040404;
   color: white;
+
+  list-style: none;
 }
 
 nav {
@@ -432,6 +434,10 @@ nav {
 
 .card-front {
   background: whitesmoke;
+}
+
+.tech-list {
+  list-style: none;
 }
 
 .card-back {
