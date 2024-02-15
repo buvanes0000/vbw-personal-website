@@ -265,21 +265,32 @@ nav {
 
 .download_btn {
   margin-top: 2rem;
+  perspective: 1000px;
 }
 
 .download_btn a {
   color: #fff;
   padding: 1rem 3rem;
+  background-color: #f28585;
 
   border: 1px solid #fff;
   text-decoration: none;
+  color: #333;
   transition: all 0.8s;
+
+  border-radius: 1px 10px 0px 10px;
   letter-spacing: 2px;
+  transform: translateY(10px);
+  /* Apply animation */
 }
 .download_btn a:hover {
   background-color: #fff;
-  color: #333;
 }
+
+.about_content .download_btn div:hover {
+  transform: translateY(-8%);
+}
+
 @media screen and (max-width: 440px) {
   .download_btn a {
     font-size: 0.8em;
