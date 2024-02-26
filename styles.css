@@ -598,17 +598,35 @@ nav {
   transform: rotateY(180deg);
 }
 
-.sec_4 .portfolio .animate {
+.sec_4 .portfolio .animate:nth-child(odd) {
   filter: blur(5px);
   transition: all 2s;
   transform: translateX(-100%);
   opacity: 0;
 }
-.sec_4.show .portfolio .animate {
+.sec_4.show .portfolio .animate:nth-child(odd) {
   filter: blur(0px);
   transition: all 2s;
   transform: translateX(0%);
   opacity: 1;
+}
+.sec_4 .portfolio .animate:nth-child(even) {
+  filter: blur(5px);
+  transition: all 2s;
+  transform: translateX(100%);
+  opacity: 0;
+}
+.sec_4.show .portfolio .animate:nth-child(even) {
+  filter: blur(0px);
+  transition: all 2s;
+  transform: translateX(0%);
+  opacity: 1;
+}
+.sec_4.show .portfolio .animate:nth-child(odd) {
+  transition-delay: 200ms;
+}
+.sec_4.show .portfolio .animate:nth-child(even) {
+  transition-delay: 400ms;
 }
 .sec_4 h2 {
   transform: scale(0);
