@@ -14,12 +14,16 @@
 }
 
 /* Body Styling */
-body {
+body,
+html {
   font-family: "Josefin Sans", sans-serif;
-  background-color: #040404;
-  color: white;
+  background-color: #1f1717;
+  color: #eeedeb;
+  width: 100%;
+  overflow-x: hidden;
 
   list-style: none;
+  scrollbar-width: smooth;
 }
 
 nav {
@@ -27,7 +31,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   min-height: 8vh;
-  background-color: #1b1b1b;
+  background-color: #ffe6c7;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   position: sticky;
   top: 0;
@@ -46,6 +50,7 @@ nav {
   margin-left: 1rem;
   letter-spacing: 10px;
   font-size: 2rem;
+  color: #ff6000;
 }
 
 .nav-links {
@@ -60,7 +65,7 @@ nav {
 }
 
 .nav-links a {
-  color: white;
+  color: #e36414;
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
@@ -81,7 +86,7 @@ nav {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: white;
+  background-color: #ff6000;
   margin: 5px;
   transition: all 0.3s ease;
 }
@@ -96,7 +101,8 @@ nav {
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: #1b1b1b;
+    background-color: #ffe6c7;
+    color: #e36414;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,60 +149,102 @@ nav {
 }
 
 /* Hero Section Styling */
+
 .hero {
-  background-image: url("./img/Buvanes.png");
-
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  object-fit: scale-down;
   height: 100vh;
-  display: flex;
-  justify-content: center;
+  display: grid;
   align-items: center;
+  place-content: center;
+
   text-align: center;
-  color: white;
+  color: #fff;
 }
 
-@media screen and (max-width: 768px) {
-  .hero {
-    background-repeat: no-repeat;
-    background-size: cover;
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  position: relative;
+
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  animation: rotateAvatar 5s infinite linear; /* Added animation property */
+}
+
+@keyframes rotateAvatar {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
   }
 }
 
 .hero-content {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 2.3rem;
-  border-radius: 10px;
-  margin-top: 28rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.hero h1 {
-  font-size: 2rem;
+.hero-content h1 {
+  font-size: 3rem;
+  font-family: "Rubik Doodle Shadow", system-ui;
   margin-bottom: 1rem;
+  letter-spacing: 0.5rem;
+  color: #fe7a36;
 }
 
-@media screen and (max-width: 440px) {
-  .hero h1 {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #fe7a36;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 1rem;
+  border-radius: 1px 10px 0px 10px;
+  border: 1px solid #ffdede;
+  transition: all 0.7s;
+}
+
+.cta-button:hover {
+  background-color: #ffe6c7;
+  color: #e36414;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
   }
 }
 
-.cta {
-  display: inline-block;
-  background-color: #1b1b1b;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+.sec_1 .animate {
+  transform: translateY(-100%);
+  filter: blur(5px);
+  transition: all 2s;
+  opacity: 0;
 }
 
-.cta:hover {
-  background-color: #2f2f2f;
+.sec_1.show .animate {
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0px);
 }
 
 /* About Section Styling */
@@ -207,7 +255,8 @@ nav {
 
 .about h2 {
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  overflow: hidden;
+  position: relative;
 }
 
 .about_content {
@@ -244,6 +293,7 @@ nav {
 .about p {
   font-size: 1.1rem;
   line-height: 1.6;
+  position: relative;
 }
 
 @media screen and (max-width: 440px) {
@@ -254,7 +304,8 @@ nav {
 
 .my__name {
   font-size: 2rem;
-  color: var(--pink_red);
+
+  color: #ffe6c7;
 }
 
 @media screen and (max-width: 440px) {
@@ -269,22 +320,24 @@ nav {
 }
 
 .download_btn a {
-  color: #fff;
   padding: 1rem 3rem;
-  background-color: #f28585;
+  background-color: #fe7a36;
+  color: #fff;
 
-  border: 1px solid #fff;
+  border: 1px solid #ffdede;
   text-decoration: none;
-  color: #333;
+
   transition: all 0.8s;
+  overflow: hidden;
 
   border-radius: 1px 10px 0px 10px;
   letter-spacing: 2px;
-  transform: translateY(10px);
+
   /* Apply animation */
 }
 .download_btn a:hover {
-  background-color: #fff;
+  background-color: #ffe6c7;
+  color: #e36414;
 }
 
 .about_content .download_btn div:hover {
@@ -297,14 +350,33 @@ nav {
   }
 }
 
+.sec_2 .span-animate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 105%;
+  background-color: #1f1717;
+  transition: 2s all;
+  overflow: hidden;
+}
+.sec_2.show .span-animate {
+  width: 0;
+}
+.sec_2 .span-zoom {
+  transform: scale(0.8);
+}
+
 /*Skills section styling */
 
 #Skills {
   letter-spacing: 2px;
   margin-top: 5rem;
+  min-height: 100vh;
 }
 .skill-container {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -327,7 +399,7 @@ nav {
   color: #fff;
   text-align: center;
   border: 2px solid #fff;
-  transition: background-color 800ms linear;
+  transition: background-color 500ms linear;
 }
 @media screen and (max-width: 440px) {
   .skill {
@@ -347,10 +419,44 @@ nav {
 }
 
 .skill-container div:hover {
-  background-color: #d6e4e5;
+  background-color: #ffe6c7;
+  color: #e36414;
+}
 
-  color: #040404;
-  transform: scale(1.1) translateY(-5%);
+.sec_3 .skill-container .animate:nth-child(odd) {
+  filter: blur(5px);
+  transition: all 2s;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.sec_3.show .skill-container .animate:nth-child(odd) {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0%);
+}
+.sec_3 .skill-container .animate:nth-child(even) {
+  filter: blur(5px);
+  transition: all 2s;
+  transform: translateX(100%);
+  opacity: 0;
+}
+.sec_3.show .skill-container .animate:nth-child(even) {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0%);
+}
+.sec_3 h1.animate {
+  filter: blur(5px);
+  transition: all 2s;
+  transform: translateY(-300%);
+  opacity: 0;
+}
+.sec_3.show h1 {
+  filter: blur(0px);
+  transition: all 2s;
+  transform: translateY(0%);
+
+  opacity: 1;
 }
 
 /* Portfolio Section Styling */
@@ -371,9 +477,9 @@ nav {
 }
 
 .portfolio {
-  perspective: 1500px;
   display: flex;
   justify-content: center;
+  perspective: 1500px;
   flex-wrap: wrap;
   gap: 5rem;
 }
@@ -383,6 +489,9 @@ nav {
   height: 400px;
   position: relative;
   transform-style: preserve-3d;
+
+  overflow: hidden;
+  border-radius: 30px;
 }
 
 @media screen and (max-width: 440px) {
@@ -430,16 +539,13 @@ nav {
   transition: transform 0.7s;
 }
 
-.card-front {
-  background-image: url(./img/Buvanes.png);
-}
-
 .card-front,
 .card-back {
   width: 100%;
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
+
   text-align: center;
 }
 
@@ -490,6 +596,26 @@ nav {
 
 .card:hover .card-inner {
   transform: rotateY(180deg);
+}
+
+.sec_4 .portfolio .animate {
+  filter: blur(5px);
+  transition: all 2s;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.sec_4.show .portfolio .animate {
+  filter: blur(0px);
+  transition: all 2s;
+  transform: translateX(0%);
+  opacity: 1;
+}
+.sec_4 h2 {
+  transform: scale(0);
+  transition: all 1s;
+}
+.sec_4.show h2 {
+  transform: scale(1);
 }
 
 /* Contact Section Styling */
@@ -543,14 +669,13 @@ nav {
 /*footer style*/
 
 .footer {
-  background-color: #1b1b1b;
-  color: #fff;
   text-align: center;
   padding: 20px 0;
 }
 
 .footer a {
   color: #fff;
+
   text-decoration: none;
   margin: 0 10px;
 }
@@ -564,6 +689,7 @@ nav {
 
 .footer {
   text-align: center;
+
   margin-top: 50px; /* Adjust this value as needed */
 }
 
@@ -578,12 +704,13 @@ nav {
 
 .social_icons {
   width: 40px;
+
   height: 40px;
   object-fit: contain;
   transition: all 0.7s;
   padding: 0.5rem;
   border-radius: 10px;
-  box-shadow: rgba(255, 255, 255, 0.4) 2px -2px 1px 1px;
+  box-shadow: #b3541e 2px -2px 1px 1px;
 
   /* Apply transition effect for smooth hover */
 }
@@ -594,4 +721,14 @@ nav {
 
 /*media queries */
 @media screen and (max-width: 440px) {
+}
+
+/*scroll animation */
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
 }
