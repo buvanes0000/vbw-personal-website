@@ -27,13 +27,14 @@ html {
 }
 
 nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 8vh;
   background-color: #ffe6c7;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 10;
 }
@@ -372,11 +373,10 @@ nav {
 #Skills {
   letter-spacing: 2px;
   margin-top: 5rem;
-  min-height: 100vh;
 }
 .skill-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -491,6 +491,7 @@ nav {
   transform-style: preserve-3d;
 
   overflow: hidden;
+
   border-radius: 30px;
 }
 
@@ -502,15 +503,15 @@ nav {
 }
 
 .icons {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   object-fit: contain;
 }
 
 .project_image {
   width: 300px;
   height: 400px;
-  object-position: right center;
+  object-position: center;
 
   object-fit: cover;
 }
