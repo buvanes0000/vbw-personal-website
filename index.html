@@ -4,49 +4,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VBW Web Development</title>
+  <title>Rookie Dev</title>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/services/service-4/assets/css/service-4.css" />
   <link rel="stylesheet" href="styles.css">
   <script defer src="script/script.js" type="text/javascript"></script>
 </head>
 
 <body>
-  <nav>
-    <div class="logo">
+  
 
-      <h3> VBW</h3>
+ 
 
+   
+    
+  
+    <section class="hero-section sec_1">
+      <nav>
+        <div class="logo">
+    
+        <img class="logo-img" src="./img/rookielogo-removebg-preview.png"alt="">
+    
+    
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#Skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+      <div class="hero-content animate">
 
-    </div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#Skills">Skills</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="burger">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
-    </div>
-  </nav>
-  <section class="hero sec_1">
-
-    <div class="hero-content animate">
-
-      <img class="avatar animate" src="./img/Buvanes.png" alt="Avatar">
-
-      <h1 class="animate"><span class="animate">V</span><span class="animate">B</span><span class="an">W</span></h1>
-      <p>Web Development</p>
-      <a href="#portfolio" class="cta-button">My works</a>
-    </div>
+          <h1 class="hero-title">Welcome to <div style="color: rgb(35, 163, 218); font-size: 4rem; font-family:Pacifico, cursive">Rookie <span style="font-family:Pacifico, cursive ;">Dev</span></div></h1>
+          <p class="hero-description">Experience the power of creative design.</p>
+          <a href="#" class="hero-btn">Learn More</a>
+      </div>
+      <div class="video-container">
+          <video autoplay muted playsinline loop>
+              <source src="img/moon (1).mp4" type="video/mp4">
+          </video>
+      </div>
   </section>
+
+
+
+  
+
+
 
   <section class="about sec_2" id="about">
 
     <div class="about_content">
       <h2>About Me <span class="span-animate"></span></h2>
+      <img src="./img/buvanes.jpg" class="spin span_image profile-img " alt="">
 
-      <div class="logo_container"> <img src="./img/Logo.png" alt="logo" /></div>
+   
 
       <p>Hey fellow coders and non-coders! I'm <span class="my__name">Buvanes</span>👋, a fresh face in front-end
         development. Learning the ropes, one line of code at a time. Here to explore and grow in this dynamic field.
@@ -55,48 +76,109 @@
 
 
 
-      <div class="download_btn">
+      <div class="download_btn  span_image">
         <div> <a href="buvanesresume.pdf" download="buvanesresume.pdf">Resume</a></div>
 
 
       </div>
+      
     </div>
 
-  </section>
-  <section id="Skills" class="skills sec_3">
-    <div class="skill_flex">
-      <h1 class="skill-heading animate">Skills</h1>
-      <div class="skill-container">
-        <div class="skill animate">
-          <p>HTML</p>
-        </div>
-        <div class="skill animate ">
-          <p>CSS</p>
-        </div>
-        <div class="skill animate">
-          <p>javascript</p>
-        </div>
-        <div class="skill animate">
-          <p>FIGMA</p>
-        </div>
-        <div class="skill animate">
-          <p>React JS</p>
-        </div>
-        <div class="skill animate">
-          <p>API</p>
-        </div>
+    
+    
 
-        <div class="skill animate">
-          <p>Tailwind</p>
+  </section>
+<section class="my-service">
+  <div class="container">
+    <h1 class="container__heading">Our Services</h1>
+    <div class="container__box">
+       <!-- Responsive Design -->
+        <div class="box">
+            <img src="https://th.bing.com/th/id/OIP.FQrcQpYLelyi3bj7TsBaagHaHa?rs=1&pid=ImgDetMain" alt="Responsive Design Icon">
+            <h3>Responsive Design</h3>
+            <p>Ensure your website looks great and functions seamlessly on all devices and screen sizes.</p>
+            <a href="#" class="btn">Read More</a>
         </div>
-        <div class="skill animate">
-          <p>SASS</p>
+       <!-- SEO Optimization -->
+        <div class="box">
+            <img src="https://cdn-icons-png.flaticon.com/512/1998/1998736.png?token=exp=2024-04-26T15:52:05.360Z" alt="SEO Optimization Icon">
+            <h3>SEO Optimization</h3>
+            <p>Enhance your website's visibility on search engines and attract more organic traffic.</p>
+            <a href="#" class="btn">Read More</a>
         </div>
-        <div class="skill animate">
-          <p>Web Flow</p>
+        <!-- 24/7 Support -->
+        <div class="box">
+            <img src="https://cdn-icons-png.flaticon.com/512/2894/2894918.png?token=exp=2024-04-26T15:52:42.287Z" alt="24/7 Support Icon">
+            <h3>24/7 Support</h3>
+            <p>Get round-the-clock assistance and technical support whenever you need it.</p>
+            <a href="#" class="btn">Read More</a>
         </div>
-        <div class="skill animate">
-          <p>SEO</p>
+        <!-- Mobile Responsiveness -->
+        <div class="box">
+            <img src="https://cdn-icons-png.flaticon.com/512/4158/4158785.png?token=exp=2024-04-26T15:53:21.399Z" alt="Mobile Responsiveness Icon">
+            <h3>Mobile Responsiveness</h3>
+            <p>Ensure your website is optimized for mobile devices, providing a seamless user experience.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+        <!-- Website Maintenance -->
+        <div class="box">
+            <img src="https://www.360webdesigns.com/wp-content/uploads/2016/07/Services_Maintenance_v1-01.png" alt="Website Maintenance Icon">
+            <h3>Website Maintenance</h3>
+            <p>Keep your website up-to-date and running smoothly with regular maintenance and updates.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+        <!-- UI/UX Design -->
+        <div class="box">
+            <img src="https://th.bing.com/th/id/OIP.8I7t_jcGIUn0F4V_94ZpWwHaHa?rs=1&pid=ImgDetMain" alt="UI/UX Design Icon">
+            <h3>UI/UX Design</h3>
+            <p>Create intuitive and visually appealing user interfaces to enhance user experience.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+</div>
+
+
+     </section>
+
+
+
+
+
+  <section id="Skills" class="skills sec_3 span-animate">
+    <h2 class="skill-heading span-animate">Techs</h2>
+    <div class="skills">
+      <div class="skills-bar span-animate">
+        <div class="bar">
+          <div class="info">
+            <span>HTML</span>
+          </div>
+          <div class="progress-line"><span class="html"></span></div>
+          <div class="bar">
+            <div class="info">
+              <span>CSS</span>
+            </div>
+            <div class="progress-line"><span class="css"></span></div>
+            <div class="bar">
+              <div class="info">
+                <span>Tailwind</span>
+              </div>
+              <div class="progress-line"><span class="tailwind"></span></div>
+              <div class="bar">
+                <div class="info">
+                  <span>JAVASCRIPT</span>
+                </div>
+                <div class="progress-line">
+                  <span class="javascript"></span>
+                </div>
+                <div class="bar">
+                  <div class="info">
+                    <span>React</span>
+                  </div>
+                  <div class="progress-line"><span class="react"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -220,15 +302,24 @@
     </div>
 
   </section>
-  <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Message" required></textarea>
+
+
+
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="678d3442-0611-4b3d-b83d-b71dbefce9cd">
+
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <div class="h-captcha" data-captcha="true"></div>
       <button type="submit">Send</button>
-    </form>
-  </section>
+  </form>
+</section>
+
+
+
 
   <footer class="footer">
     <div>
@@ -242,6 +333,9 @@
           src="./img/gmail.png" alt="Gmail"></a>
     </div>
   </footer>
+  <button id="scrollToTopBtn" class="scroll-to-top-btn">↑</button>
+
+  <script src="https://web3forms.com/client/script.js" async defer></script>
 
 
 </body>
