@@ -89,3 +89,20 @@ function submitForm(event) {
   event.preventDefault(); // Prevent the default form submission behavior
   // Your form submission logic here (e.g., AJAX request or PHP code)
 }
+
+
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  var nameInput = document.getElementById("name");
+  var emailInput = document.getElementById("email");
+
+  // Check if name contains any numbers
+  if (/\d/.test(nameInput.value)) {
+    alert("Name cannot contain numbers.");
+    event.preventDefault();
+    return;
+  }
+
+  // Convert email to lowercase
+  emailInput.value = emailInput.value.toLowerCase();
+});
